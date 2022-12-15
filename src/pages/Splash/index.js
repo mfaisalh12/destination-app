@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, Image, StatusBar} from 'react-native';
 import React, {useEffect} from 'react';
 
-import {Logo, Beltim, Geopark} from '../../assets';
+import {LogoApp, Beltim, Geopark} from '../../assets';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Splash = ({navigation}) => {
   return (
     <View style={styles.background}>
       <StatusBar translucent backgroundColor="transparent" />
-      <Image source={Logo} />
+      <Image source={LogoApp} />
 
       <View style={styles.support}>
         <Text style={styles.supportText}>Didukung oleh</Text>

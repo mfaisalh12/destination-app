@@ -31,6 +31,7 @@ const MainApp = () => {
               secondColor={tabInfo.focused ? '#0085CC' : '#9096A0'}
             />
           ),
+          headerTitle: '',
         }}
       />
       <Tab.Screen
