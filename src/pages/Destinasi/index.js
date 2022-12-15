@@ -102,7 +102,7 @@ const Destinasi = () => {
               style={{
                 marginRight: 10,
                 backgroundColor:
-                  kategoriseleksi == item.nama ? '#4169e1' : '#fff',
+                  kategoriseleksi == item.nama ? '#4169e1' : '#696969',
                 elevation: 3,
                 paddingHorizontal: 10,
                 marginBottom: 10,
@@ -139,7 +139,93 @@ const Destinasi = () => {
               }}>
               <Image
                 source={{ulr: item.Image}}
-                style={{width: 200, height: 150}}
+                style={{
+                  width: 200,
+                  height: 150,
+                  marginBottom: 5,
+                  borderRadius: 3,
+                  marginTop: 5,
+                }}
+                resizemode={'cover'}
+              />
+              <Text
+                style={{
+                  color: '#212121',
+                  fontsize: 18,
+                  fontWeight: 'bold',
+                }}>
+                {item.namawisata}
+              </Text>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+      <View style={{}}>
+        <FlatList
+          data={dataTrending}
+          horizontal
+          showsVerticalScrollIndicator={false}
+          style={{marginLeft: 10}}
+          renderItem={({item}) => (
+            <TouchableOpacity
+              style={{
+                marginRight: 10,
+                backgroundColor: '#fff',
+                elevation: 3,
+                paddingHorizontal: 10,
+                marginBottom: 10,
+                borderRadius: 8,
+                marginLeft: 5,
+              }}>
+              <Image
+                source={{ulr: item.Image}}
+                style={{
+                  width: 200,
+                  height: 150,
+                  marginBottom: 5,
+                  borderRadius: 3,
+                  marginTop: 5,
+                }}
+                resizemode={'cover'}
+              />
+              <Text
+                style={{
+                  color: '#212121',
+                  fontsize: 18,
+                  fontWeight: 'bold',
+                }}>
+                {item.namawisata}
+              </Text>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+      <View style={{}}>
+        <FlatList
+          data={dataTrending}
+          horizontal
+          showsVerticalScrollIndicator={false}
+          style={{marginLeft: 10}}
+          renderItem={({item}) => (
+            <TouchableOpacity
+              style={{
+                marginRight: 10,
+                backgroundColor: '#fff',
+                elevation: 3,
+                paddingHorizontal: 10,
+                marginBottom: 10,
+                borderRadius: 8,
+                marginLeft: 5,
+              }}>
+              <Image
+                source={{ulr: item.Image}}
+                style={{
+                  width: 200,
+                  height: 150,
+                  marginBottom: 5,
+                  borderRadius: 3,
+                  marginTop: 5,
+                }}
                 resizemode={'cover'}
               />
               <Text
