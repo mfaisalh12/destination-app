@@ -4,11 +4,11 @@ import React, {useEffect} from 'react';
 import {Logo, Beltim, Geopark} from '../../assets';
 
 const Splash = ({navigation}) => {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigation.replace('MainApp');
-  //   }, 3000);
-  // }, [navigation]);
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('MainApp');
+    }, 3000);
+  }, [navigation]);
 
   return (
     <View style={styles.background}>
