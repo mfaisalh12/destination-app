@@ -4,18 +4,18 @@ import React, {useEffect} from 'react';
 import {Logo, Beltim, Geopark} from '../../assets';
 
 const Splash = ({navigation}) => {
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.replace('MainApp');
-    }, 3000);
-  }, [navigation]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     navigation.replace('MainApp');
+  //   }, 3000);
+  // }, [navigation]);
 
   return (
     <View style={styles.background}>
       <StatusBar translucent backgroundColor="transparent" />
       <Image source={Logo} />
 
-      <View style={{marginTop: 225}}>
+      <View style={styles.support}>
         <Text style={styles.supportText}>Didukung oleh</Text>
         <View style={styles.logoBottom}>
           <Image source={Beltim} style={styles.imgBottom} />
@@ -35,14 +35,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logoBottom: {
-    flexDirection: 'row',
-    marginBottom: 0,
+  support: {
+    position: 'absolute',
+    bottom: 70,
+    left: 'auto',
   },
   supportText: {
     textAlign: 'center',
     marginBottom: 20,
     fontWeight: '600',
+  },
+  logoBottom: {
+    flexDirection: 'row',
+    marginBottom: 0,
   },
   imgBottom: {
     width: 48,
