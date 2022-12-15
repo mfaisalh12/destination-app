@@ -2,6 +2,7 @@ import LogoApp from './logo-app.png';
 import Beltim from './belitung-timur.png';
 import Geopark from './belitong-geopark.png';
 import Logo from './logo.png';
+import Hero from './hero.png';
 
 import BerandaIcon from './BerandaIcon';
 import DestinasiIcon from './DestinasiIcon';
@@ -13,6 +14,7 @@ export {
   Beltim,
   Geopark,
   Logo,
+  Hero,
   BerandaIcon,
   DestinasiIcon,
   InformasiIcon,
