@@ -3,6 +3,7 @@ import React from 'react';
 import kerjurkab from '../../assets/images/Kerjurkab.png';
 import lkpm from '../../assets/images/LKPM.png';
 import beltim from '../../assets/images/Beltim.png';
+import { NavigationContainer } from '@react-navigation/native';
 
 const Informasi = () => {
   return (
@@ -10,13 +11,15 @@ const Informasi = () => {
       flexDirection: "column",
       
     }]}>
-      <View style={[styles.contains, {flexDirection: "row", padding:14}]}>
-        <Image source={kerjurkab} style={{width: 64, height: 64}}/>
-        <View style={{ paddingLeft: 16}}>
-          <Text style={[styles.judul]}>Adakan Kerjurkab Tinju 2022</Text>
-          <Text style={[styles.timePublish]}>20 Oktober 2021</Text>
+      {/* <NavigationContainer> */}
+        <View style={[styles.contains, {flexDirection: "row", padding:14}]}>
+          <Image source={kerjurkab} style={{width: 64, height: 64}}/>
+          <View style={{ paddingLeft: 16}}>
+            <Text style={[styles.judul]}>Adakan Kerjurkab Tinju 2022</Text>
+            <Text style={[styles.timePublish]}>20 Oktober 2021</Text>
+          </View>
         </View>
-      </View>
+      {/* </NavigationContainer> */}
       <View style={[styles.contains, {flexDirection: "row", padding:14}]}>
         <Image source={beltim} style={{width: 64, height: 64}}/>
         <View style={{ paddingLeft: 16}}>
