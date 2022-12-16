@@ -7,4 +7,13 @@ import Tentang from './Tentang';
 import DetailInformasi from './DetailInformasi';
 import Map from './MapPin';
 
-export {Splash, Beranda, Destinasi, Informasi, Lainnya, Tentang, DetailInformasi, Map};
+export {
+  Splash,
+  Beranda,
+  Destinasi,
+  Informasi,
+  Lainnya,
+  Tentang,
+  DetailInformasi,
+  Map,
+};

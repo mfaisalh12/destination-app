@@ -163,6 +163,7 @@ const Beranda = ({navigation}) => {
           <Text style={{fontSize: 20, letterSpacing: -0.5, fontWeight: '500'}}>
             Informasi dan Berita
           </Text>
+          {'\n'}
           <Text style={{fontSize: 12, fontWeight: '400'}}>
             Seputar Belitung Timur
           </Text>

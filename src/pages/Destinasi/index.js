@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Iconicons from 'react-native-vector-icons/Ionicons';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Destinasi = ({navigation}) => {
   const [kategori, setKategori] = useState([
@@ -34,42 +34,22 @@ const Destinasi = ({navigation}) => {
 
   const [dataTrending, setdataTrending] = useState([
     {
-      namawisata: 'tempat smackdown',
-      image:
-        'https://images.unsplash.com/photo-1583141244634-5e1ddf8e0d1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80',
-    },
-    {
-      namawisata: 'tempat tempat gwntor',
-      image:
-        'https://images.unsplash.com/photo-1579488800208-b0a0348209aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80',
-    },
-    {
-      namawisata: 'tempat tempat judi',
-      image:
-        'https://www.shutterstock.com/image-photo/beauty-model-girl-dancing-silhouette-600w-1139887841.jpg',
-    },
-    {
-      namawisata: 'tempat penpat mabok',
-      image:
-        'https://www.shutterstock.com/image-vector/sexy-santa-girl-vector-illustration-600w-117856669.jpg',
-    },
-    {
-      namawisata: 'tempat tempat wiwkwk',
+      namawisata: 'Tempat Nongki',
       image:
         'https://www.shutterstock.com/image-vector/vector-illustration-inspired-by-painting-600w-2045859191.jpg',
     },
     {
-      namawisata: 'tempat tempat ribut',
+      namawisata: 'Tempat Kencan',
       image:
         'https://www.shutterstock.com/image-vector/glowing-moon-on-blue-sky-600w-2034817790.jpg',
     },
     {
-      namawisata: 'tempat tempat nongkrong',
+      namawisata: 'Tempat Jones',
       image:
         'https://www.shutterstock.com/image-vector/impressionist-portrait-bearded-redhead-man-600w-1830079976.jpg',
     },
     {
-      namawisata: 'tempat tempat pipi ',
+      namawisata: 'Tempat Merenung',
       image:
         'https://www.shutterstock.com/image-illustration/father-time-surreal-portrait-three-600w-1989944546.jpg',
     },
@@ -93,17 +73,14 @@ const Destinasi = ({navigation}) => {
           flexDirection: 'row',
         }}>
         <Iconicons name="search-outline" size={25} color="#900" />
-        <Pressable 
-           onPress={() => navigation.navigate('Map')}
-
-           style={({ pressed }) => [
+        <Pressable
+          onPress={() => navigation.navigate('Map')}
+          style={({pressed}) => [
             {
-              backgroundColor: pressed
-                ? 'rgb(210, 230, 255)'
-                : 'white'
+              backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',
             },
-            styles.wrapperCustom
-        ]}>
+            styles.wrapperCustom,
+          ]}>
           <View>
             <Iconicons name="map-outline" size={25} color="#900" />
           </View>
@@ -155,7 +132,7 @@ const Destinasi = ({navigation}) => {
                 marginLeft: 5,
               }}>
               <Image
-                source={{ulr: item.Image}}
+                source={{uri: item.image}}
                 style={{
                   width: 200,
                   height: 150,
@@ -195,7 +172,7 @@ const Destinasi = ({navigation}) => {
                 marginLeft: 5,
               }}>
               <Image
-                source={{ulr: item.Image}}
+                source={{uri: item.image}}
                 style={{
                   width: 200,
                   height: 150,
@@ -235,7 +212,7 @@ const Destinasi = ({navigation}) => {
                 marginLeft: 5,
               }}>
               <Image
-                source={{ulr: item.Image}}
+                source={{uri: item.image}}
                 style={{
                   width: 200,
                   height: 150,
