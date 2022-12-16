@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // import src page
 import {Splash, Beranda, Destinasi, Informasi, Lainnya} from '../pages';
@@ -13,6 +14,7 @@ import {
   DestinasiIcon,
   InformasiIcon,
   LainnyaIcon,
+  Logo,
 } from '../assets';
 
 const Stack = createNativeStackNavigator();
@@ -31,6 +33,15 @@ const MainApp = () => {
               secondColor={tabInfo.focused ? '#0085CC' : '#9096A0'}
             />
           ),
+          headerTitle: '',
+          headerLeftContainerStyle: {paddingHorizontal: 20},
+          headerRIghtContainerStyle: {paddingHorizontal: 20},
+          headerLeft: () => (
+            <Image source={Logo} style={{width: 28, height: 32}} />
+          ),
+          headerRight: () => {
+            <Icon name="heart-outline" size={30} color="#4F8EF7" />;
+          },
         }}
       />
       <Tab.Screen
