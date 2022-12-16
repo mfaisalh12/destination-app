@@ -6,7 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 // import src page
-import {Splash, Beranda, Destinasi, Informasi, Lainnya} from '../pages';
+import {Splash, Beranda, Destinasi, Informasi, Lainnya, Tentang, DetailInformasi} from '../pages';
 
 // import assets
 import {
@@ -96,6 +96,15 @@ const Router = () => {
         name="MainApp"
         component={MainApp}
         options={{headerShown: false}}
+      />
+      <Stack.Screen name="Tentang" component={Tentang} />
+      <Stack.Screen 
+        name="DetailInformasi" 
+        component={DetailInformasi} 
+        options={{ 
+          title: 'Detail Informasi',
+         
+        }}
       />
     </Stack.Navigator>
   );

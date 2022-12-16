@@ -2,7 +2,10 @@ import {StyleSheet, Text, View, Image, ImageBackground,  SafeAreaView, ScrollVie
 import React from 'react';
 import smp4 from '../../assets/images/smp4.png';
 
-const DetailInformasi = () => {
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const DetailInformasi = ({navigation}) => {
   return (
     <View  style={[styles.container, {
       flexDirection: "column",
