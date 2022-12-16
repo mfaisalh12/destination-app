@@ -2,15 +2,20 @@ import {StyleSheet, Text, View, Image, ImageBackground,  SafeAreaView, ScrollVie
 import React from 'react';
 import smp4 from '../../assets/images/smp4.png';
 
-const DetailInformasi = () => {
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const DetailInformasi = ({navigation}) => {
   return (
     <View  style={[styles.container, {
       flexDirection: "column",
       
     }]}>
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
-        <Image source={smp4}  style={[styles.image]}>
-        </Image>
+        <View style={[styles.image]}>
+            <Image source={smp4}  />
+        </View>
+
         <View style={[styles.cotents,{
           flexDirection: 'column',
         }]}>

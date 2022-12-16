@@ -1,9 +1,11 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, Pressable} from 'react-native';
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import logo1 from '../../assets/images/inspiring.png';
 import logo2 from '../../assets/images/inspiring_big.png';
-const Lainnya = () => {
+const Lainnya = ({ navigation }) => {
   return (
     <View style={[styles.container, {
       flexDirection: "column",
@@ -21,18 +23,63 @@ const Lainnya = () => {
           height: 56,
         }}/>
       </View>
-      <View style={[styles.cotents]} >
-        <Text style={[styles.textContents]}>Tentang</Text>
-      </View>
-      <View style={[styles.cotents]} >
-        <Text style={[styles.textContents]}>Favorit destinasi</Text>
-      </View>
-      <View style={[styles.cotents]} >
-        <Text style={[styles.textContents]}>Kritik dan Saran</Text>
-      </View>
-      <View style={[styles.cotents]} >
-        <Text style={[styles.textContents]}>Nilai Aplikasi</Text>
-      </View>
+      <Pressable
+        onPress={() => navigation.navigate('Tentang')}
+        style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? 'rgb(210, 230, 255)'
+              : 'white'
+          },
+          styles.wrapperCustom
+        ]}
+      >
+        <View style={[styles.cotents]} >
+          <Text style={[styles.textContents]}>Tentang</Text>
+        </View>
+      </Pressable>
+      <Pressable
+         style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? 'rgb(210, 230, 255)'
+              : 'white'
+          },
+          styles.wrapperCustom
+        ]}
+      >
+        <View style={[styles.cotents]} >
+          <Text style={[styles.textContents]}>Favorit destinasi</Text>
+        </View>
+      </Pressable>
+      <Pressable
+         style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? 'rgb(210, 230, 255)'
+              : 'white'
+          },
+          styles.wrapperCustom
+        ]}
+      >
+        <View style={[styles.cotents]} >
+          <Text style={[styles.textContents]}>Kritik dan Saran</Text>
+        </View>
+      </Pressable>
+      <Pressable
+         style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? 'rgb(210, 230, 255)'
+              : 'white'
+          },
+          styles.wrapperCustom
+        ]}
+      >
+        <View style={[styles.cotents]} >
+          <Text style={[styles.textContents]}>Nilai Aplikasi</Text>
+        </View>
+      </Pressable>
       <View style={[{margin:40}]} >
         <Text style={[styles.hakCipta,{
           color:'#4B5563',

@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image,Button,Pressable} from 'react-native';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Icon2 from 'react-native-vector-icons/Entypo';
 
 // import src page
-import {Splash, Beranda, Destinasi, Informasi, Lainnya} from '../pages';
+import {Splash, Beranda, Destinasi, Informasi, Lainnya, Tentang, DetailInformasi, Map} from '../pages';
 
 // import assets
 import {
@@ -97,6 +98,38 @@ const Router = () => {
         component={MainApp}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="Tentang" component={Tentang} />
+      <Stack.Screen 
+        name="DetailInformasi" 
+        component={DetailInformasi} 
+        options={{ 
+          title: '',
+          headerShown: true,
+          headerTransparent: true,
+          headerRight: () => (
+            <Pressable
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed
+                    ? 'rgb(210, 230, 255)'
+                    : 'transparent',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: 5,
+                    borderRadius: 100,
+                },
+                
+                
+              ]}
+            >
+              <View>
+                <Icon2 name="share" size={24} />
+              </View>
+            </Pressable>
+          ),
+        }}
+      />
+      <Stack.Screen name="Map" component={Map} options={{ title:'Peta Destinasi'}}/>
     </Stack.Navigator>
   );
 };
