@@ -3,6 +3,7 @@ import Beltim from './belitung-timur.png';
 import Geopark from './belitong-geopark.png';
 import Logo from './logo.png';
 import Hero from './hero.png';
+import PosterCovid from './posterCovid.png';
 
 // icon bar
 import BerandaIcon from './BerandaIcon';
@@ -26,6 +27,7 @@ export {
   Geopark,
   Logo,
   Hero,
+  PosterCovid,
   WisataAlam,
   WisataAir,
   WisataKuliner,

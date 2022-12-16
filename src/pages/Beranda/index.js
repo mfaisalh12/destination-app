@@ -24,6 +24,7 @@ import {
   LayananPublik,
   Travel,
   OlehOleh,
+  PosterCovid,
 } from '../../assets';
 
 const dataDestinasi = [
@@ -52,7 +53,35 @@ const dataDestinasi = [
 const jelajahi = [
   {
     title: 'Wisata Alam',
-    icon: {WisataAlam},
+    icon: WisataAlam,
+  },
+  {
+    title: 'Wisata Air',
+    icon: WisataAir,
+  },
+  {
+    title: 'Wisata Kuliner',
+    icon: WisataKuliner,
+  },
+  {
+    title: 'Wisata Sejarah',
+    icon: WisataSejarah,
+  },
+  {
+    title: 'Hotel Penginapan',
+    icon: Hotel,
+  },
+  {
+    title: 'Layanan Public',
+    icon: LayananPublik,
+  },
+  {
+    title: 'Travel Transportasi',
+    icon: Travel,
+  },
+  {
+    title: 'Belanja Oleh-oleh',
+    icon: OlehOleh,
   },
 ];
 
@@ -63,9 +92,11 @@ const Beranda = ({navigation}) => {
   });
   const jelajahItem = jelajahi.map((item, index) => {
     return (
-      <View>
-        <Image source={item.icon} />
-        <Text></Text>
+      <View style={{width: '25%', padding: '6%'}} key={index}>
+        <Image source={item.icon} style={{width: '100%'}} />
+        <Text style={{textAlign: 'center', fontSize: 12, fontWeight: '500'}}>
+          {item.title}
+        </Text>
       </View>
     );
   });
@@ -113,12 +144,29 @@ const Beranda = ({navigation}) => {
             Pilihan kategori yang diminati
           </Text>
         </Text>
-        <View style={styles.destinationCard}>
-          <View>
-            <Image />
-            <Text></Text>
-          </View>
-        </View>
+        <View style={styles.destinationCard}>{jelajahItem}</View>
+      </SafeAreaView>
+      <SafeAreaView
+        style={{
+          marginVertical: 40,
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Image
+          style={{width: '90%', height: 210, resizeMode: 'stretch'}}
+          source={PosterCovid}
+        />
+      </SafeAreaView>
+      <SafeAreaView>
+        <Text style={{textAlign: 'center', marginTop: 32}}>
+          <Text style={{fontSize: 20, letterSpacing: -0.5, fontWeight: '500'}}>
+            Informasi dan Berita
+          </Text>
+          <Text style={{fontSize: 12, fontWeight: '400'}}>
+            Seputar Belitung Timur
+          </Text>
+        </Text>
       </SafeAreaView>
     </ScrollView>
   );
