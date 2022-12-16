@@ -6,7 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 // import src page
-import {Splash, Beranda, Destinasi, Informasi, Lainnya} from '../pages';
+import {Splash, Beranda, Destinasi, Informasi, Lainnya, Map} from '../pages';
 
 // import assets
 import {
@@ -97,6 +97,7 @@ const Router = () => {
         component={MainApp}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="Map" component={Map} options={{ title:'Peta Destinasi'}}/>
     </Stack.Navigator>
   );
 };
