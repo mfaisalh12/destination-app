@@ -5,11 +5,14 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
+  Pressable,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Iconicons from 'react-native-vector-icons/Ionicons';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Destinasi = () => {
+const Destinasi = ({navigation}) => {
   const [kategori, setKategori] = useState([
     {
       nama: 'Semua',
@@ -90,7 +93,21 @@ const Destinasi = () => {
           flexDirection: 'row',
         }}>
         <Iconicons name="search-outline" size={25} color="#900" />
-        <Iconicons name="map-outline" size={25} color="#900" />
+        <Pressable 
+           onPress={() => navigation.navigate('Map')}
+
+           style={({ pressed }) => [
+            {
+              backgroundColor: pressed
+                ? 'rgb(210, 230, 255)'
+                : 'white'
+            },
+            styles.wrapperCustom
+        ]}>
+          <View>
+            <Iconicons name="map-outline" size={25} color="#900" />
+          </View>
+        </Pressable>
       </View>
       <View>
         <FlatList

@@ -12,8 +12,10 @@ const DetailInformasi = ({navigation}) => {
       
     }]}>
       <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
-        <Image source={smp4}  style={[styles.image]}>
-        </Image>
+        <View style={[styles.image]}>
+            <Image source={smp4}  />
+        </View>
+
         <View style={[styles.cotents,{
           flexDirection: 'column',
         }]}>
