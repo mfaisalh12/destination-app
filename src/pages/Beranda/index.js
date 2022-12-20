@@ -12,6 +12,7 @@ import {
 
 // import component
 import Card from '../../components/Card';
+import ListBerita from '../../components/ListBerita';
 
 // import assets
 import {
@@ -25,6 +26,9 @@ import {
   Travel,
   OlehOleh,
   PosterCovid,
+  Kerjurkab,
+  Lkpm,
+  BeritaBeltim,
 } from '../../assets';
 
 const dataDestinasi = [
@@ -85,6 +89,24 @@ const jelajahi = [
   },
 ];
 
+const dataBerita = [
+  {
+    image: Kerjurkab,
+    title: 'Adakan Kerjurkab Tinju 2022',
+    time: '20 Oktober 2021',
+  },
+  {
+    image: BeritaBeltim,
+    title: 'Wabup Beltim Apresiasi Job Fair Beltim',
+    time: '15 Oktober 2021',
+  },
+  {
+    image: Lkpm,
+    title: 'LKPM Buat Proyek Pemerintahan Jadi Lebih Terpantau',
+    time: '8 Oktober 2021',
+  },
+];
+
 const Beranda = ({navigation}) => {
   const {height, width} = useWindowDimensions();
   const destinationItem = dataDestinasi.map((item, index) => {
@@ -124,8 +146,7 @@ const Beranda = ({navigation}) => {
           Lihat Lainnya
         </Text>
       </SafeAreaView>
-      <View
-        style={{textAlign: 'center', marginHorizontal: '6%', marginTop: 20}}>
+      <View style={{textAlign: 'center', marginHorizontal: '6%'}}>
         <View
           style={{
             borderBottomColor: 'black',
@@ -168,6 +189,25 @@ const Beranda = ({navigation}) => {
             Seputar Belitung Timur
           </Text>
         </Text>
+        <View style={styles.containerBerita}>
+          {dataBerita.map((item, index) => {
+            return (
+              <ListBerita
+                key={index}
+                navigation={navigation}
+                navigate="DetailInformasi"
+                image={item.image}
+                title={item.title}
+                time={item.time}
+              />
+            );
+          })}
+        </View>
+        <Text
+          style={styles.textLink}
+          onPress={() => navigation.navigate('Informasi')}>
+          Informasi Lainnya
+        </Text>
       </SafeAreaView>
     </ScrollView>
   );
@@ -205,5 +245,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '500',
     fontSize: 14,
+    marginVertical: 40,
+  },
+  containerBerita: {
+    marginTop: 20,
   },
 });

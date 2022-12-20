@@ -4,7 +4,7 @@ import kerjurkab from '../../assets/images/Kerjurkab.png';
 import lkpm from '../../assets/images/LKPM.png';
 import beltim from '../../assets/images/Beltim.png';
 
-import ListBerita from '../../components/ListBerita.js';
+import ListBerita from '../../components/ListBerita';
 
 const dataBerita = [
   {
@@ -26,16 +26,11 @@ const dataBerita = [
 
 const Informasi = ({navigation}) => {
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          flexDirection: 'column',
-        },
-      ]}>
-      {dataBerita.map(item => {
+    <View style={styles.container}>
+      {dataBerita.map((item, index) => {
         return (
           <ListBerita
+            key={index}
             navigation={navigation}
             navigate="DetailInformasi"
             image={item.image}
@@ -55,26 +50,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
     flexDirection: 'column',
-  },
-  contains: {
-    borderBottomWidth: 0.6,
-    borderStyle: 'solid',
-    borderColor: '#DADADA',
-    width: 'auto',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-  },
-  judul: {
-    fontWeight: '400',
-    fontSize: 16,
-    lineHeight: 21,
-    color: '#1F2937',
-    paddingBottom: 4,
-  },
-  timePublish: {
-    fontWeight: '400',
-    fontSize: 12,
-    lineHeight: 18,
-    color: '#9096A0',
   },
 });

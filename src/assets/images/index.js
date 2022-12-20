@@ -21,6 +21,11 @@ import LayananPublik from './Public_Service.png';
 import Travel from './Transportation.png';
 import OlehOleh from './Shopping_Center.png';
 
+// Berita
+import Kerjurkab from './Kerjurkab.png';
+import Lkpm from './LKPM.png';
+import BeritaBeltim from './Beltim.png';
+
 export {
   LogoApp,
   Beltim,
@@ -40,4 +45,7 @@ export {
   DestinasiIcon,
   InformasiIcon,
   LainnyaIcon,
+  Kerjurkab,
+  Lkpm,
+  BeritaBeltim,
 };
