@@ -15,97 +15,12 @@ import Card from '../../components/Card';
 import ListBerita from '../../components/ListBerita';
 
 // import assets
-import {
-  Hero,
-  WisataAlam,
-  WisataAir,
-  WisataKuliner,
-  WisataSejarah,
-  Hotel,
-  LayananPublik,
-  Travel,
-  OlehOleh,
-  PosterCovid,
-  Kerjurkab,
-  Lkpm,
-  BeritaBeltim,
-} from '../../assets';
+import {Hero, PosterCovid} from '../../assets';
 
-const dataDestinasi = [
-  {
-    id: 1,
-    title: 'Pantai Serdang',
-    img: require('../../assets/images/destinasi/pantai-serdang.png'),
-  },
-  {
-    id: 2,
-    title: 'Vihara Patung Dewi Kwan Im',
-    img: require('../../assets/images/destinasi/vihara-patung.png'),
-  },
-  {
-    id: 3,
-    title: 'Replika SD Laskar Pelangi',
-    img: require('../../assets/images/destinasi/replika-sd.png'),
-  },
-  {
-    id: 4,
-    title: 'Pantai Nyiur Melambai',
-    img: require('../../assets/images/destinasi/pantai-nyiur.png'),
-  },
-];
-
-const jelajahi = [
-  {
-    title: 'Wisata Alam',
-    icon: WisataAlam,
-  },
-  {
-    title: 'Wisata Air',
-    icon: WisataAir,
-  },
-  {
-    title: 'Wisata Kuliner',
-    icon: WisataKuliner,
-  },
-  {
-    title: 'Wisata Sejarah',
-    icon: WisataSejarah,
-  },
-  {
-    title: 'Hotel Penginapan',
-    icon: Hotel,
-  },
-  {
-    title: 'Layanan Public',
-    icon: LayananPublik,
-  },
-  {
-    title: 'Travel Transportasi',
-    icon: Travel,
-  },
-  {
-    title: 'Belanja Oleh-oleh',
-    icon: OlehOleh,
-  },
-];
-
-const dataBerita = [
-  {
-    image: Kerjurkab,
-    title: 'Adakan Kerjurkab Tinju 2022',
-    time: '20 Oktober 2021',
-  },
-  {
-    image: BeritaBeltim,
-    title: 'Wabup Beltim Apresiasi Job Fair Beltim',
-    time: '15 Oktober 2021',
-  },
-  {
-    image: Lkpm,
-    title: 'LKPM Buat Proyek Pemerintahan Jadi Lebih Terpantau',
-    time: '8 Oktober 2021',
-  },
-];
+// import database
+import dataDestinasi from '../../database/Destinasi';
+import jelajahi from '../../database/Jelajah';
+import dataBerita from '../../database/Berita';
 
 const Beranda = ({navigation}) => {
   const {height, width} = useWindowDimensions();
